@@ -1,100 +1,107 @@
-body {
-    background-color: #fff8e1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff8e1;
+    color: #333;
+}
+
+/* Cabeçalho */
 header {
     background-color: #bf8b2e;
     color: white;
-    padding: 20px;
+    text-align: center;
+    padding: 30px 20px;
 }
 
 .header-content {
     display: flex;
-    align-items: center; /*alinha na vertical*/
-    justify-content: center; /*alinha na horizontal*/
-    gap: 20px; /*espaçamento interno*/
-    flex-wrap: wrap; /*quebra a linha e ajusta*/
+    justify-content: center;
+    align-items: center;
 }
 
-.header-text {
-    margin-bottom: 30px;
+.header-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-h1 {
-    font-size: 50px;
-    text-align: center;
+.header-text p {
+    font-size: 20px;
 }
 
-p {
-    font-size: 30px;
-}
-
-img {
-    width: 33%; 
-    height: auto;
-}
-
+/* Links */
 a {
     color: white;
     text-decoration: none;
 }
 
-a :hover{
+a:hover {
     text-decoration: underline;
 }
 
-section {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: justify;
-}
-
-article {
-    background-color: white;
-    padding: 15px;
-    border-radius: 15px;
-    margin-top: 20px;
-    box-shadow:  9px 15px 5px 4px rgba(0, 0, 0, 0.1);
-}
-
-ul {
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-li {
-    font-size: 20px;
-}
-
 h2 {
+    font-size: 35px;
+    text-align: center;
     color: #bf8b2e;
-    font-size: 37px;
+    margin: 40px 0 25px;
 }
 
+/* Área dos cards */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+/* Cards */
+.card {
+    width: 30%;
+    min-width: 280px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagens */
+.card img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Rodapé */
 footer {
     background-color: #bf8b2e;
-    padding: 10px;
+    color: white;
+    padding: 15px;
     text-align: center;
-    margin-top: 30px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 18px;
 }
 
-/*Para celulares*/
-@media (max-width: 768px) {
-    img {
-        width: 55%;
+/* Celular */
+@media (max-width: 760px) {
+    section {
+        display: block;
+        padding: 20px;
     }
 
-    h1 {
-        font-size: 40px;
-    }
-
-    p {
-        font-size: 20px;
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
-
